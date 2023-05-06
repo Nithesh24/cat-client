@@ -148,3 +148,66 @@ body{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
   }
+
+  /* css mobile user */
+
+@media only screen and (max-width: 500px)
+{
+    body{
+        height: 100vh;
+        overflow-y :hidden;
+    }
+    .navBar{
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .navBar li{
+        transform: scale(1.2);
+        margin : 0 .3em;
+    }
+
+    .mainBody{
+        width: 100vw;
+        height: 30vh;
+
+    }
+    .card{
+        height: 20vh;
+        width: 20vh;
+    }
+
+    .card:first-child{
+        margin-left : 5vw;
+        margin-top : 8vh;
+        z-index: 0;
+        background-image: url("assets/fact.jpg");
+    }
+    .card:nth-child(2){
+        margin-left : 14vh;
+        margin-bottom: 14vh;
+        z-index: 2;
+        background-image : url("assets/image.jpg")
+    }
+    .card:last-child{
+        margin-left : 22vh;
+        margin-top : 8vh;
+        z-index: 3;
+        background-image : url("assets/info.jpg");
+    }
+
+    .card:active::after{
+        animation-name: come-front;
+        animation-fill-mode :forwards;
+    }
+
+    @keyframes come-front{
+        from{
+            z-index: 1;
+        }
+        to{
+            z-index: 4;
+            opacity: 0;
+        }
+    }
+}
