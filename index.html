@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Cats</title>
+        <link rel = "stylesheet" href = "style.css">
+        <script src = "script.js"></script>
+    </head>
+    <body>
+        <div class = "navBar">
+            <ul>
+                <li onclick = "visit('#')">Main</li>
+                <li onclick = "visit('./about.html')">About</li>
+            </ul>
+        </div>
+        <div class="mainBody">
+            <div class = "card card-0" onmouseover="displayText(this, 0)" onclick="mainFun(this, 0)"></div>
+            <div class = "card card-1" onmouseover="displayText(this, 1)" onclick="mainFun(this, 1)"></div>
+            <div class = "card card-2" onmouseover="displayText(this, 2)" onclick="mainFun(this, 2)"></div>
+        </div>
+        <div class = "output">
+        </div>
+    </body>
+</html>
